@@ -15,15 +15,15 @@
       <div class="teacher-pane__column">
         <p class="teacher-point">
           <span class="teacher-point__type">Специальность: </span>
-          <span class="teacher-point__answer">Программирование</span>
+          <span class="teacher-point__answer">{{ teacher.speciality }}</span>
         </p>
         <p class="teacher-point">
-          <span class="teacher-point__type">Работает в: </span>
-          <span class="teacher-point__answer">Центр на Уручье</span>
+          <span class="teacher-point__type">Работает: </span>
+          <span class="teacher-point__answer">{{ teacher.place }}</span>
         </p>
         <p class="teacher-point">
           <span class="teacher-point__type">Время работы: </span>
-          <span class="teacher-point__answer">9:00-18:00</span>
+          <span class="teacher-point__answer">{{ teacher.time }}</span>
         </p>
       </div>
     </section>

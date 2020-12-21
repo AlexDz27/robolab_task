@@ -19,13 +19,13 @@
                 <span class="teacher-card__surname">{{ teacher.surname }}</span><br>
                 <span>{{ teacher.name }} {{ teacher.middleName }}</span>
               </p>
-              <p class="teacher-card__speciality">Программирование</p>
+              <p class="teacher-card__speciality">{{ teacher.speciality }}</p>
               <hr class="teacher-card__separator">
               <p class="teacher-card__center">
                 <span class="teacher-card__point-description">Работает</span>
-                Центр на Уручье
+                {{ teacher.place }}
               </p>
-              <p class="teacher-card__work-time">Время работы: 9:00-18:00</p>
+              <p class="teacher-card__work-time">Время работы: {{ teacher.time }}</p>
             </div>
           </a>
         </li>

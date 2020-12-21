@@ -37,6 +37,21 @@ class Teacher
    */
   private $imgPath;
 
+  /**
+   * @ORM\Column(type="string", length=255)
+   */
+  private $speciality;
+
+  /**
+   * @ORM\Column(type="string", length=255)
+   */
+  private $place;
+
+  /**
+   * @ORM\Column(type="string", length=255)
+   */
+  private $time;
+
   public function getId(): ?int
   {
     return $this->id;
@@ -91,6 +106,42 @@ class Teacher
   public function setImgPath(?string $imgPath): self
   {
       $this->imgPath = $imgPath;
+
+      return $this;
+  }
+
+  public function getSpeciality(): ?string
+  {
+      return $this->speciality;
+  }
+
+  public function setSpeciality(string $speciality): self
+  {
+      $this->speciality = $speciality;
+
+      return $this;
+  }
+
+  public function getPlace(): ?string
+  {
+      return $this->place;
+  }
+
+  public function setPlace(string $place): self
+  {
+      $this->place = $place;
+
+      return $this;
+  }
+
+  public function getTime(): ?string
+  {
+      return $this->time;
+  }
+
+  public function setTime(string $time): self
+  {
+      $this->time = $time;
 
       return $this;
   }
