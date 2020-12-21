@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Учитель {{ teacher.fullName }}{% endblock %}
+
+{% block body %}
+
+  <section class="section">
+    <h1 class="heading">{{ teacher.fullName }}</h1>
+
+    <section class="teacher-pane">
+      <div class="teacher-pane__column">
+        <img width="270" height="215" src="{{ asset('images/teachers/' ~ teacher.imgPath)}}" alt="{{ teacher.fullName }}">
+      </div>
+
+      <div class="teacher-pane__column">
+        <p class="teacher-point">
+          <span class="teacher-point__type">Специальность: </span>
+          <span class="teacher-point__answer">Программирование</span>
+        </p>
+        <p class="teacher-point">
+          <span class="teacher-point__type">Работает в: </span>
+          <span class="teacher-point__answer">Центр на Уручье</span>
+        </p>
+        <p class="teacher-point">
+          <span class="teacher-point__type">Время работы: </span>
+          <span class="teacher-point__answer">9:00-18:00</span>
+        </p>
+      </div>
+    </section>
+  </section>
+
+{% endblock %}
