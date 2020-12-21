@@ -47,23 +47,4 @@ class TeachersController extends AbstractController
         'teacher' => $teacher
      ]);
   }
-
-  /**
-   * @Route("/teachers/test/create", name="teachers_test_create")
-   */
-  public function createTestTeacher(): Response
-  {
-    $entityManager = $this->getDoctrine()->getManager();
-
-    $teacher = new Teacher();
-    $teacher->setName('Валентина');
-    $teacher->setMiddleName('Ивановна');
-    $teacher->setSurname('Чайкова');
-
-    $entityManager->persist($teacher);
-
-    $entityManager->flush();
-
-    return new Response('Saved new teacher with id: ' . $teacher->getId());
-  }
 }

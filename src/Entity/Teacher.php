@@ -100,6 +100,10 @@ class Teacher
 
   public function getImgPath(): ?string
   {
+      if ($this->imgPath === null) {
+          return 'nophoto.png';
+      }
+
       return $this->imgPath;
   }
 
